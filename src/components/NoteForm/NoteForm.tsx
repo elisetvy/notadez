@@ -1,4 +1,4 @@
-import { Col, Row, Form, Stack } from "react-bootstrap";
+import { Form, Stack, Row, Col } from "react-bootstrap";
 
 function NoteForm() {
   return (

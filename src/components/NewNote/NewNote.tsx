@@ -3,7 +3,7 @@ import NoteForm from "../NoteForm/NoteForm";
 function NewNote() {
   return (
     <>
-      <p className="">New Note</p>
+      <p className="mb-4">New Note</p>
       <NoteForm />
     </>
   );
