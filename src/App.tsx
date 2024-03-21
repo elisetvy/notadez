@@ -1,11 +1,11 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import NewNote from "./components/NewNote";
+import NewNote from "./components/NewNote/NewNote";
 import "./App.css";
 
 function App() {
   return (
-    <div className="border border-solid border-red-400 mx-10 my-10">
+    <div className="">
       <Routes>
         <Route path="/" element={<p>Home</p>} />
         <Route path="/new" element={<NewNote />} />
