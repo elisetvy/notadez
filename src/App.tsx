@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import { v4 as uuidV4 } from "uuid";
 
 import useLocalStorage from "./useLocalStorage";
+import NoteList from "./components/NoteList/NoteList";
 import NewNote from "./components/NewNote/NewNote";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -61,7 +62,7 @@ function App() {
   return (
     <Container className="my-4">
       <Routes>
-        <Route path="/" element={<p>Home</p>} />
+        <Route path="/" element={<NoteList availableTags={tags} />} />
         <Route
           path="/new"
           element={
