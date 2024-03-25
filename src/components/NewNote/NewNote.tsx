@@ -1,10 +1,15 @@
 import NoteForm from "../NoteForm/NoteForm";
+import { NoteData } from "../../App";
 
-function NewNote() {
+type NewNoteProps = {
+  onSubmit: (data: NoteData) => void;
+};
+
+function NewNote({ onSubmit }: NewNoteProps) {
   return (
     <>
       <p className="mb-4">New Note</p>
-      <NoteForm />
+      <NoteForm onSubmit={onSubmit} />
     </>
   );
 }
