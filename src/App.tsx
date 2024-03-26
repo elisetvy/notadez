@@ -2,11 +2,13 @@ import { useMemo } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { v4 as uuidV4 } from "uuid";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import useLocalStorage from "./useLocalStorage";
 import NoteList from "./components/NoteList/NoteList";
 import NewNote from "./components/NewNote/NewNote";
-import "bootstrap/dist/css/bootstrap.min.css";
+import NoteLayout from "./components/NoteLayout/NoteLayout";
+import Note from "./components/Note/Note";
 
 export type Note = {
   id: string;
@@ -76,8 +78,8 @@ function App() {
             />
           }
         />
-        <Route path="/:id">
-          <Route index element={<p>Show</p>} />
+        <Route path="/:id" element={<NoteLayout notes={notesWithTags} />}>
+          <Route index element={<Note />} />
           <Route path="edit" element={<p>Edit</p>} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
