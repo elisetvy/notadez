@@ -9,12 +9,12 @@ import NewNote from "./components/NewNote/NewNote";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export type Note = {
-  id: string & NoteData;
-};
+  id: string;
+} & NoteData;
 
 export type RawNote = {
-  id: string & RawNoteData;
-};
+  id: string;
+} & RawNoteData;
 
 export type RawNoteData = {
   title: string;
